@@ -25,4 +25,6 @@ public class SoldierController {
     public Soldier createSoldier(@RequestBody Soldier soldier){
         return service.createSoldier(soldier);
     }
+
+    @PatchMapping("/{id}/")
 }
