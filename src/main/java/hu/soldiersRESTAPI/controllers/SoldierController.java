@@ -26,5 +26,8 @@ public class SoldierController {
         return service.createSoldier(soldier);
     }
 
-    @PatchMapping("/{id}/")
+    @PatchMapping("/{id}/{shotenemies}")
+    public Soldier updateSoldier(@PathVariable("id") int id,@PathVariable("shotenemies") int shot){
+        return service.updateSoldier(id, shot);
+    }
 }
