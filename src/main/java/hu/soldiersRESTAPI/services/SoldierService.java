@@ -36,4 +36,13 @@ public class SoldierService {
         }
         throw new ResponseStatusException(HttpStatus.NOT_FOUND);
     }
+
+    public Soldier replaceSoldier(int id, Soldier soldier) {
+        Optional <Soldier> optionalSoldier = repository.findById(id);
+        if(optionalSoldier.isPresent()){
+            soldier.setId(id);
+            return  repository.save(soldier);
+        }
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+    }
 }

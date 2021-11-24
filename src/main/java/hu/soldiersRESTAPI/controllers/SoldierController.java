@@ -30,4 +30,8 @@ public class SoldierController {
     public Soldier updateSoldier(@PathVariable("id") int id,@PathVariable("shotenemies") int shot){
         return service.updateSoldier(id, shot);
     }
+    @PutMapping("/{id}")
+    public Soldier replaceSoldier(@PathVariable("id") int id, @RequestBody Soldier soldier){
+        return service.replaceSoldier(id, soldier);
+    }
 }
