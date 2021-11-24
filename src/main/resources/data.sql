@@ -1,0 +1,1 @@
+INSERT INTO soldier (name, rank, birth, weapon, shotenemies) VALUES ('Jack Ryan', 'private', to_date('1925.07.04','yyyy.MM.dd') ,'M4A4', 5)
