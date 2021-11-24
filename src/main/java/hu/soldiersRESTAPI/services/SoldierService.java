@@ -45,4 +45,13 @@ public class SoldierService {
         }
         throw new ResponseStatusException(HttpStatus.NOT_FOUND);
     }
+
+    public void deleteSoldier(int id) {
+        Optional<Soldier> optionalSoldier = repository.findById(id);
+        if (optionalSoldier.isPresent()) {
+            repository.deleteById(id);
+        } else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
+    }
 }

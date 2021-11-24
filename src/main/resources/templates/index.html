@@ -7,6 +7,37 @@
 <body>
 
   <h2>Soliders REST API</h2>
-
+  <table cellpadding="15">
+      <tr>
+          <th>Request method</th>
+          <th>URL</th>
+          <th>Service</th>
+      </tr>
+      <tr>
+          <td>GET</td>
+          <td>http://localhost:8080/soldiers</td>
+          <td>List all soldiers</td>
+      </tr>
+      <tr>
+          <td>POST</td>
+          <td>http://localhost:8080/soldiers</td>
+          <td>Add new solder</td>
+      </tr>
+      <tr>
+          <td>PATCH</td>
+          <td>http://localhost:8080/soldiers/{id}/{shotenemies}</td>
+          <td>Modify numbers of shot enemies</td>
+      </tr>
+      <tr>
+          <td>PUT</td>
+          <td>http://localhost:8080/soldiers/{id}</td>
+          <td>Replace a soldier</td>
+      </tr>
+      <tr>
+          <td>DELETE</td>
+          <td>http://localhost:8080/soldiers/{id}</td>
+          <td>Delete a soldier</td>
+      </tr>
+  </table>
 </body>
 </html>
